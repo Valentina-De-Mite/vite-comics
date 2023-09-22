@@ -1,0 +1,10 @@
+@use "/node_modules/bootstrap/scss/bootstrap";
+
+/* Variables */
+@use "/_variables.scss" as *;
+
+/* Common */
+
+body {
+  color: $dc_primary;
+}
