@@ -1,6 +1,18 @@
 <script>
+import CardComponent from "./CardComponent.vue";
+import Cards from "../assets/card.js";
 export default {
   name: "AppMain",
+
+  components: {
+    CardComponent,
+  },
+
+  data() {
+    return {
+      Cards,
+    };
+  },
 };
 </script>
 
@@ -15,71 +27,11 @@ export default {
     <div
       class="container row m-auto justify-content-between align-items-center"
     >
-      <div class="col-2 d-flex justify-content-center">
-        <div
-          class="text-center justify-content-center d-flex align-items-center"
-        >
-          <img
-            class="w-25"
-            src="../assets/img/buy-comics-digital-comics.png"
-            alt=""
-            srcset=""
-          />
-          <p class="ms-2 fs-6">DIGITAL COMICS</p>
-        </div>
-      </div>
-      <div class="col-2 d-flex justify-content-center">
-        <div
-          class="text-center justify-content-center d-flex align-items-center"
-        >
-          <img
-            class="w-25"
-            src="../assets/img/buy-comics-merchandise.png"
-            alt=""
-            srcset=""
-          />
-          <p class="ms-2 fs-6">DC MERCHANDISE</p>
-        </div>
-      </div>
-      <div class="col-2 d-flex justify-content-center">
-        <div
-          class="text-center justify-content-center d-flex align-items-center"
-        >
-          <img
-            class="w-25"
-            src="../assets/img/buy-comics-subscriptions.png"
-            alt=""
-            srcset=""
-          />
-          <p class="ms-2 fs-6">SUBSCRITION</p>
-        </div>
-      </div>
-      <div class="col-2 d-flex justify-content-center">
-        <div
-          class="text-center justify-content-center d-flex align-items-center"
-        >
-          <img
-            class="w-25"
-            src="../assets/img/buy-comics-shop-locator.png"
-            alt=""
-            srcset=""
-          />
-          <p class="ms-2 fs-6">COMIC SHOP LOCATOR</p>
-        </div>
-      </div>
-      <div class="col-2 d-flex justify-content-center">
-        <div
-          class="text-center justify-content-center d-flex align-items-center"
-        >
-          <img
-            class="w-25"
-            src="../assets/img/buy-comics-digital-comics.png"
-            alt=""
-            srcset=""
-          />
-          <p class="ms-2 fs-6">DC POWER VISA</p>
-        </div>
-      </div>
+      <CardComponent
+        v-for="card in Cards"
+        :image_src="card.image_source"
+        :description="card.description"
+      ></CardComponent>
     </div>
   </div>
 </template>
