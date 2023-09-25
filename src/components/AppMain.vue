@@ -24,7 +24,12 @@ export default {
   <div class="jumbotron py-5"></div>
 
   <div class="black">
-    <div class="container py-5 text-center">
+    <div class="container series py-5 text-center">
+      <div
+        class="blue popup py-2 px-1 fw-medium w-25 text-center text-light fs-4"
+      >
+        CURRENT SERIES
+      </div>
       <div class="row-cols-sm-6 row">
         <ComicComponent
           v-for="comic in comics"
@@ -34,6 +39,10 @@ export default {
         >
         </ComicComponent>
       </div>
+
+      <button class="btn btn-primary py-2 px-5 fs-5 mt-4 fw-medium">
+        LOAD MORE
+      </button>
     </div>
   </div>
 
@@ -52,7 +61,7 @@ export default {
 
 <style lang="scss" scoped>
 .black {
-  background-color: black;
+  background-color: rgb(27, 27, 27);
   color: white;
 }
 .blue {
@@ -64,5 +73,15 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   height: 50vh;
+}
+
+.series {
+  position: relative;
+}
+
+.popup {
+  position: absolute;
+  top: -25px;
+  left: 15px;
 }
 </style>

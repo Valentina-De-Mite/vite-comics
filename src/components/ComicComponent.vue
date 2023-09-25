@@ -14,7 +14,7 @@ export default {
     <div class="card_container">
       <img class="w-75 comic" :src="thumb" alt="" />
     </div>
-    <a class="mt-2 text-decoration-none link">{{ series }}</a>
+    <a class="mt-5 text-decoration-none link">{{ series }}</a>
     <p>{{ price }}</p>
   </div>
 </template>
