@@ -24,8 +24,8 @@ export default {
   <div class="jumbotron py-5"></div>
 
   <div class="black">
-    <div class="container py-5">
-      <div class="row row-cols-sm-4">
+    <div class="container py-5 text-center">
+      <div class="row-cols-sm-6 row">
         <ComicComponent
           v-for="comic in comics"
           :thumb="comic.thumb"

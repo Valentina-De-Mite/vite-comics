@@ -63,30 +63,30 @@ export default {
       <div class="col-4 d-flex align-items-end">
         <h5 class="tb text-primary me-4">FOLLOW US</h5>
         <img
-          class="me-2"
+          class="me-2 icon"
           src="../assets/img/footer-facebook.png"
           alt=""
           srcset=""
         />
         <img
-          class="me-2"
+          class="icon me-2"
           src="../assets/img/footer-twitter.png"
           alt=""
           srcset=""
         />
         <img
-          class="me-2"
+          class="icon me-2"
           src="../assets/img/footer-youtube.png"
           alt=""
           srcset=""
         />
         <img
-          class="me-2"
+          class="icon me-2"
           src="../assets/img/footer-pinterest.png"
           alt=""
           srcset=""
         />
-        <img src="../assets/img/footer-periscope.png" alt="" />
+        <img class="icon" src="../assets/img/footer-periscope.png" alt="" />
       </div>
     </div>
   </div>
@@ -115,5 +115,12 @@ a {
 .link:hover,
 .tb:hover {
   text-decoration: underline !important;
+}
+
+.icon {
+  opacity: 0.5;
+}
+.icon:hover {
+  opacity: 1;
 }
 </style>

@@ -10,12 +10,12 @@ export default {
 </script>
 
 <template>
-  <div class="col-2">
-    <div class="comic_card">
-      <img class="w-25" :src="thumb" alt="" />
-      <p>{{ series }}</p>
-      <p>{{ price }}</p>
+  <div class="comic_card col-sm-2 col-2">
+    <div class="card_container">
+      <img class="w-75 comic" :src="thumb" alt="" />
     </div>
+    <a class="mt-2 text-decoration-none link">{{ series }}</a>
+    <p>{{ price }}</p>
   </div>
 </template>
 
@@ -26,5 +26,9 @@ a {
 .link:hover,
 .tb:hover {
   text-decoration: underline !important;
+}
+
+.comic {
+  height: 200px;
 }
 </style>
