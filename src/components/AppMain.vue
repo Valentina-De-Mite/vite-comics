@@ -17,11 +17,7 @@ export default {
 </script>
 
 <template>
-  <div class="black py-5">
-    <div class="container">
-      <h5>Content Goes here</h5>
-    </div>
-  </div>
+  <div class="jumbotron py-5"></div>
 
   <div class="blue fs-4 text-light py-3">
     <div
@@ -43,5 +39,12 @@ export default {
 }
 .blue {
   background-color: #68bafc;
+}
+
+.jumbotron {
+  background-image: url(../assets/img/jumbotron.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
 }
 </style>
