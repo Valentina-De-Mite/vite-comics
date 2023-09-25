@@ -1,15 +1,19 @@
 <script>
+import ComicComponent from "./ComicComponent.vue";
 import CardComponent from "./CardComponent.vue";
 import Cards from "../assets/card.js";
+import comics from "../assets/comics.js";
 export default {
   name: "AppMain",
 
   components: {
     CardComponent,
+    ComicComponent,
   },
 
   data() {
     return {
+      comics,
       Cards,
     };
   },
@@ -18,6 +22,20 @@ export default {
 
 <template>
   <div class="jumbotron py-5"></div>
+
+  <div class="black">
+    <div class="container py-5">
+      <div class="row row-cols-sm-4">
+        <ComicComponent
+          v-for="comic in comics"
+          :thumb="comic.thumb"
+          :series="comic.series"
+          :price="comic.price"
+        >
+        </ComicComponent>
+      </div>
+    </div>
+  </div>
 
   <div class="blue fs-4 text-light py-3">
     <div
