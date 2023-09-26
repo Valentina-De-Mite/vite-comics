@@ -25,9 +25,7 @@ export default {
 
   <div class="black">
     <div class="container series py-5 text-center">
-      <div
-        class="blue popup py-2 px-1 fw-medium w-25 text-center text-light fs-4"
-      >
+      <div class="blue popup py-1 px-3 fw-medium text-center text-light fs-4">
         CURRENT SERIES
       </div>
       <div class="row-cols-sm-6 row">
@@ -82,6 +80,6 @@ export default {
 .popup {
   position: absolute;
   top: -25px;
-  left: 15px;
+  left: 25px;
 }
 </style>
